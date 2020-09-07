@@ -6,7 +6,7 @@
 rm -rf ~/.vimrc
 rm -rf ~/.vim
 
-git clone git@github.com:alex-my/vimrc.git
+git clone https://github.com/alex-my/vimrc.git
 cd vimrc
 cp ./vimrc ~/.vimrc
 ```
