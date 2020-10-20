@@ -56,8 +56,42 @@ sudo ./install.py --all
 
 ## 快捷键分配
 
-* `ctrl+n`: 打开与关闭`nerdtree`
-* `ctrl+j`:打开与关闭`tagbar` 
-* `ctrl+p`: 文件查找
-* `ctrl+d`: 文件查找时，切换路径查找和文件名查找
-* `ctrl+r`: 文件查找时，切换查找是否启用正则表达式
+- `ctrl+n`: 打开与关闭`nerdtree`
+- `ctrl+j`:打开与关闭`tagbar`
+- `ctrl+p`: 文件查找
+- `ctrl+d`: 文件查找时，切换路径查找和文件名查找
+- `ctrl+r`: 文件查找时，切换查找是否启用正则表达式
+
+## 错误
+
+- 使用 `vim 文件名`打开没有问题，但使用`crontab -e`等会报错
+
+```text
+Error detected while processing /root/.vimrc:
+line   27:
+E538: No mouse support: mouse=a
+line   79:
+E518: Unknown option: autochdir
+line  108:
+E492: Not an editor command: ^IPlug 'preservim/nerdtree'
+line  110:
+E492: Not an editor command: ^IPlug 'Xuyuanp/nerdtree-git-plugin'
+...
+```
+
+查看默认的编辑器，发现输出为空
+
+```text
+echo $EDITOR
+```
+
+设置默认的编辑器为`vim`
+在`~/.bashrc`或者`~/.zshrc`添加
+
+```text
+export EDITOR=vim
+```
+
+执行`source ~/.bashrc` 或者 `source ~/.zshrc` 立即生效
+
+在执行`crontab -e`，没有发现报错了
