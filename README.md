@@ -8,7 +8,7 @@ rm -rf ~/.vim
 
 git clone https://github.com/alex-my/vimrc.git
 cd vimrc
-cp ./vimrc ~/.vimrc
+cp .vimrc ~/.vimrc
 ```
 
 安装`vim-plug`做为插件管理
