@@ -131,6 +131,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'plasticboy/vim-markdown'
 	" golang 插件
 	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+	" 格式化插件
+	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 
 call plug#end()
@@ -176,6 +178,8 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 " >>>>>>>>>>>>>>>>>> tagbar 生成函数、变量列表 >>>>>>>>>>>>>>>>>>
 " 打开和关闭 tagbar
 map <C-j> :TagbarToggle <CR>
+" 生成 tags
+map <C-5> :TagbarToggle <CR>
 " 设置 ctags,需要 ctags 支持，在 mac 下，需要自行另外安装一个，不要自带的 brew install ctags
 " 设置路径，使用 which ctags
 let g:tagbar_ctags_bin='/usr/local/bin/ctags'
@@ -185,7 +189,10 @@ let g:tagbar_width=30
 let g:tagbar_right=1
 " 自动打开 tagbar
 autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx,*.go,*.java,*.py call tagbar#autoopen()
-" 配置 gotags，不再需要手动 ctags -R。要安装 gotags，brew install gotags
+" 对于 golang 可以配置 gotags，不再需要手动 ctags -R。
+" 要安装 gotags
+" mac下: brew install gotags
+" 其它: go get -u github.com/jstemmer/gotags
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [
@@ -288,3 +295,7 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+" >>>>>>>>>>>>>>>>>> vim-prettier.vim 代码格式化 >>>>>>>>>>>>>>>>>>
+" 格式化的快捷键
+map <C-l> :PrettierAsync <CR>

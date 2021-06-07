@@ -24,6 +24,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 -- mac 下的安装方法
 brew install ctags
 
+-- centos 下的安装方法
+yum install ctags -y
+
 -- 重启终端，查看
 which ctags
 /usr/local/bin/ctags
@@ -34,6 +37,10 @@ which ctags
 ```text
 -- mac 下的安装方式
 brew install gotags
+
+-- 全平台安装方式
+go get -u github.com/jstemmer/gotags
+
 ```
 
 打开`~/.vimrc`，然后在命令模式下输入`PlugInstall`安装插件
@@ -61,6 +68,15 @@ sudo ./install.py --all
 - `ctrl+p`: 文件查找
 - `ctrl+d`: 文件查找时，切换路径查找和文件名查找
 - `ctrl+r`: 文件查找时，切换查找是否启用正则表达式
+
+## 日常
+
+```text
+PlugUpdate 安装或者更新插件
+PlugUpgrade 更新 vim-plug 自己
+PlugClean 移除未使用的插件
+PlugStatus 检查插件状态
+```
 
 ## 错误
 
