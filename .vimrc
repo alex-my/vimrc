@@ -263,7 +263,7 @@ let g:syntastic_check_on_wq = 0
 " >>>>>>>>>>>>>>>>>> youcompleteme 代码补全工具 >>>>>>>>>>>>>>>>>>
 " 下载安装之后，需要进入目录.vim/plugged/YouCompleteMe 执行脚本
 " 事先依赖 cmake 和 python3，需要事前安装
-" sudo ./install.py --all
+" sudo python3 install.py --all
 
 
 " >>>>>>>>>>>>>>>>>> vim-colorschemes 配色方案 >>>>>>>>>>>>>>>>>>
