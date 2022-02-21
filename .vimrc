@@ -299,3 +299,8 @@ au Syntax * RainbowParenthesesLoadBraces
 " >>>>>>>>>>>>>>>>>> vim-prettier.vim 代码格式化 >>>>>>>>>>>>>>>>>>
 " 格式化的快捷键
 map <C-l> :PrettierAsync <CR>
+
+
+" >>>>>>>>>>>>>>>>>> 其它全局配置 >>>>>>>>>>>>>>>>>>
+" 运行当前 go 代码
+nnoremap gr :!go run %<CR>
