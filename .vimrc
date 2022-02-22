@@ -187,8 +187,8 @@ let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 let g:tagbar_width=30
 " 设置位置 
 let g:tagbar_right=1
-" 自动打开 tagbar
-autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx,*.go,*.java,*.py call tagbar#autoopen()
+" 自动打开 tagbar，默认不自动打开，有需要自动打开的，可以移除下一行的 "
+" autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx,*.go,*.java,*.py call tagbar#autoopen()
 " 对于 golang 可以配置 gotags，不再需要手动 ctags -R。
 " 要安装 gotags
 " mac下: brew install gotags
