@@ -267,8 +267,9 @@ let g:syntastic_check_on_wq = 0
 
 
 " >>>>>>>>>>>>>>>>>> vim-colorschemes 配色方案 >>>>>>>>>>>>>>>>>>
-colorscheme Dark2
-
+" 配色方案见 https://vimcolorschemes.com/
+set background=dark
+colorscheme gruvbox
 
 " >>>>>>>>>>>>>>>>>> rainbow_parentheses.vim 括号配色 >>>>>>>>>>>>>>>>>>
 let g:rbpt_colorpairs = [
