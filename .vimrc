@@ -121,6 +121,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'SirVer/ultisnips'	
 	" 配色方案
 	Plug 'flazz/vim-colorschemes'
+	" 代码补全工具
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	" 括号着色
 	Plug 'kien/rainbow_parentheses.vim'
 	" git 使用

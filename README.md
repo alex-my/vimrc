@@ -21,7 +21,7 @@
 - 安装`ctags`
 
   ```text
-  -- mac 下的安装方法
+  -- mac 下的安装方法，不使用自带的
   brew install ctags
 
   -- centos 下的安装方法
@@ -45,15 +45,51 @@
 
 - 打开`~/.vimrc`，然后在命令模式下输入`PlugInstall`安装插件
 
-## 2 快捷键分配
+## coc.vim
+
+安装一个插件对`coc`的插件进行管理
+
+```text
+-- 安装
+:CocInstall coc-marketplace
+
+-- 打开管理面板
+:CocList marketplace
+
+-- 安装插件
+:CocList marketplace python
+```
+
+已安装插件列表
+
+```text
+-- ~/.config/coc/extensions/package.json
+
+{
+  "dependencies": {
+    "coc-json": ">=1.9.2",
+    "coc-snippets": ">=3.1.10",
+    "coc-java": ">=1.15.2",
+    "coc-go": ">=1.3.33",
+    "coc-marketplace": ">=1.9.0",
+    "coc-emmet": ">=1.1.6",
+    "coc-pairs": ">=1.4.2",
+    "coc-lists": ">=1.5.1",
+    "coc-git": ">=2.7.0"
+  }
+}
+```
+
+## 3 快捷键分配
 
 - `ctrl+n`: 打开与关闭`nerdtree`
 - `ctrl+j`:打开与关闭`tagbar`
 - `ctrl+p`: 文件查找
 - `ctrl+d`: 文件查找时，切换路径查找和文件名查找
 - `ctrl+r`: 文件查找时，切换查找是否启用正则表达式
+- `ctrl+l`: 格式化
 
-## 3 日常
+## 4 日常
 
 - 插件管理
 
@@ -64,7 +100,7 @@
   PlugStatus 检查插件状态
   ```
 
-## 4 错误
+## 5 错误
 
 - 使用 `vim 文件名`打开没有问题，但使用`crontab -e`等会报错
 
