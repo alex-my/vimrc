@@ -121,8 +121,6 @@ call plug#begin('~/.vim/plugged')
 	Plug 'SirVer/ultisnips'	
 	" 配色方案
 	Plug 'flazz/vim-colorschemes'
-	" 代码补全工具
-	Plug 'ycm-core/YouCompleteMe'
 	" 括号着色
 	Plug 'kien/rainbow_parentheses.vim'
 	" git 使用
@@ -260,10 +258,6 @@ let g:syntastic_check_on_wq = 0
 
 " >>>>>>>>>>>>>>>>>> vim-go golang 插件 >>>>>>>>>>>>>>>>>>
 " >>>>>>>>>>>>>>>>>> ultisnips 代码片段工具 >>>>>>>>>>>>>>>>>>
-" >>>>>>>>>>>>>>>>>> youcompleteme 代码补全工具 >>>>>>>>>>>>>>>>>>
-" 下载安装之后，需要进入目录.vim/plugged/YouCompleteMe 执行脚本
-" 事先依赖 cmake 和 python3，需要事前安装
-" sudo python3 install.py --all
 
 
 " >>>>>>>>>>>>>>>>>> vim-colorschemes 配色方案 >>>>>>>>>>>>>>>>>>
