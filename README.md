@@ -8,7 +8,7 @@
 
   git clone https://github.com/alex-my/vimrc.git
   cd vimrc
-  cp .vimrc ~/.vimrc
+  cp .vimrc ~
   ```
 
 - 安装`vim-plug`做为插件管理
@@ -19,6 +19,7 @@
   ```
 
 - 打开`~/.vimrc`，然后在命令模式下输入`PlugInstall`安装插件
+  > 报 443 等错误时，可以多试几次，有时候会成功
 
 ## coc.vim
 
